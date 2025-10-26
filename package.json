@@ -3,13 +3,19 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "lint": "biome lint .",
+    "format": "biome format . --write"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@prisma/client": "^6.17.1",
+    "elysia": "latest",
+    "zod": "^4.1.12"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@biomejs/biome": "^2.2.6",
+    "bun-types": "latest",
+    "prisma": "^6.17.1"
   },
   "module": "src/index.js"
 }
