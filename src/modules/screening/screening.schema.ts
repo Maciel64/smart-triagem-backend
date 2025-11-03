@@ -4,13 +4,12 @@ export const createScreeningSchema = z.object({
   patient: z.object({
     name: z.string(),
     age: z.number().int().positive(),
-    gender: z.enum(["male", "female", "other"]),
-    email: z.string().optional(),
-    phone: z.string().optional(),
+    sex: z.enum(["MALE", "FEMALE", "OTHER"]),
+    email: z.string(),
+    phone: z.string(),
   }),
   symptoms: z.array(z.string()),
-  severity: z.enum(["mild", "moderate", "severe"]),
-  medications: z.array(z.string()).optional(),
+  medications: z.array(z.string()),
 });
 
 export type CreateScreeningSchema = z.infer<typeof createScreeningSchema>;

@@ -1,14 +1,12 @@
 import Elysia from "elysia";
+import { setup } from "../../setup";
 import { createScreeningSchema } from "./screening.schema";
-import { ScreeningService } from "./screening.service";
 
 export const screeningRoutes = new Elysia({ prefix: "/screening" })
-  .derive(() => ({ screeningService: new ScreeningService() }))
+  .use(setup)
   .get("/", ({ screeningService }) => screeningService.getAll())
   .post(
     "/",
-    ({ body, screeningService }) => {
-      return screeningService.create(body);
-    },
+    async ({ body, screeningService }) => screeningService.create(body),
     { body: createScreeningSchema },
   );

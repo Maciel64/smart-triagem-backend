@@ -1,0 +1,14 @@
+POST http://localhost:3001/api/v1/screening
+Content-Type: application/json
+
+{
+  "symptoms": ["Dor de cabeça", "Enjoo"],
+  "medications": ["Dipirona"],
+  "patient": {
+    "name": "Maciel Suassuna",
+    "email": "macielsuassuna14@gmail.com",
+    "sex": "MALE",
+    "phone": "999999999",
+    "age": 22
+  }
+}

@@ -8,12 +8,17 @@
     "format": "biome format . --write"
   },
   "dependencies": {
+    "@google/genai": "^1.27.0",
+    "@huggingface/inference": "^4.13.0",
     "@prisma/client": "^6.17.1",
+    "axios": "^1.13.1",
     "elysia": "latest",
+    "node-telegram-bot-api": "^0.66.0",
     "zod": "^4.1.12"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.6",
+    "@types/node-telegram-bot-api": "^0.64.12",
     "bun-types": "latest",
     "prisma": "^6.17.1"
   },

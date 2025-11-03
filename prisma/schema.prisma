@@ -17,23 +17,40 @@ datasource db {
 model Patient {
   id         String      @id @default(cuid())
   name       String
+  sex        Sex?
   email      String      @unique
   phone      String
+  age        Int
   createdAt  DateTime    @default(now())
   updatedAt  DateTime    @updatedAt
   screenings Screening[]
 }
 
 model Screening {
-  id          String   @id @default(cuid())
+  id          String          @id @default(cuid())
   symptoms    String[]
-  severity    Int
-  status      String
+  severity    Severity?
+  status      ScreeningStatus
   medications String[]
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
   patientId   String
-  patient     Patient  @relation(fields: [patientId], references: [id])
+  patient     Patient         @relation(fields: [patientId], references: [id])
+  aiScreening String?
+}
+
+enum ScreeningStatus {
+  PENDING
+  REVIEWED
+  APPROVED
+  REJECTED
+  FLAGGED
+}
+
+enum Sex {
+  MALE
+  FEMALE
+  OTHER
 }
 
 enum Severity {
