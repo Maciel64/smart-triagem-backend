@@ -12,3 +12,7 @@ Content-Type: application/json
     "age": 22
   }
 }
+
+###
+
+GET http://localhost:3001/api/v1/screening

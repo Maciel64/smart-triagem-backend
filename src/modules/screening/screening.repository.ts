@@ -11,7 +11,11 @@ type CreateScreeningInput = Omit<CreateScreeningSchema, "patient"> & {
 
 export class ScreeningRepository {
   getAll() {
-    return db.screening.findMany();
+    return db.screening.findMany({
+      include: {
+        patient: true
+      }
+    });
   }
 
   create(data: CreateScreeningInput) {

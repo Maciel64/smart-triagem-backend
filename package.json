@@ -8,6 +8,7 @@
     "format": "biome format . --write"
   },
   "dependencies": {
+    "@elysiajs/cors": "^1.4.0",
     "@google/genai": "^1.27.0",
     "@huggingface/inference": "^4.13.0",
     "@prisma/client": "^6.17.1",
