@@ -4,6 +4,8 @@
   "installCommand": "bun install",
   "buildCommand": "bun run build",
   "functions": {
-    "api/**/*.ts": {}
+    "api/**/*.ts": {
+      "runtime": "edge"
+    }
   }
 }
