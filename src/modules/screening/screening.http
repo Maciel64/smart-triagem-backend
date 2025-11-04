@@ -2,7 +2,7 @@ POST http://localhost:3001/api/v1/screening
 Content-Type: application/json
 
 {
-  "symptoms": ["Dor de cabeça", "Enjoo"],
+  "symptoms": ["Dor no peito", "Fadiga", "Dor nos olhos"],
   "medications": ["Dipirona"],
   "patient": {
     "name": "Maciel Suassuna",

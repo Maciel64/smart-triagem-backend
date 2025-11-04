@@ -8,5 +8,9 @@ const app = new Elysia({ prefix: "/api/v1" })
   .listen(3001);
 
 console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`,
+  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
 );
+
+export default async function handler(request: Request) {
+  return app.fetch(request);
+}
