@@ -7,4 +7,8 @@ export class PatientService {
   upsert(data: CreatePatientSchema) {
     return this.patientRepository.upsert(data);
   }
+
+  getAll() {
+    return this.patientRepository.getAll();
+  }
 }

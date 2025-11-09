@@ -8,5 +8,5 @@ export const screeningRoutes = new Elysia({ prefix: "/screening" })
   .post(
     "/",
     async ({ body, screeningService }) => screeningService.create(body),
-    { body: createScreeningSchema },
+    { body: createScreeningSchema }
   );

@@ -11,4 +11,8 @@ export class PatientRepository {
       },
     });
   }
+
+  getAll() {
+    return db.patient.findMany();
+  }
 }
