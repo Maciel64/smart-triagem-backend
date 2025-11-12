@@ -1,5 +1,10 @@
 import { z } from "zod";
 
+export const getScreeningsSchema = z.object({
+  email: z.email().optional(),
+  phone: z.string().optional(),
+});
+
 export const createScreeningSchema = z.object({
   patient: z.object({
     name: z.string(),
@@ -12,4 +17,5 @@ export const createScreeningSchema = z.object({
   medications: z.array(z.string()),
 });
 
+export type GetScreeningsSchema = z.infer<typeof getScreeningsSchema>;
 export type CreateScreeningSchema = z.infer<typeof createScreeningSchema>;

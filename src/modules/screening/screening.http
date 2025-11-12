@@ -1,18 +1,18 @@
-POST http://localhost:3001/api/v1/screening
+POST https://smart-triagem-backend  .vercel.app/api/v1/screening
 Content-Type: application/json
 
 {
-  "symptoms": ["Dor no peito", "Fadiga", "Dor nos olhos"],
-  "medications": ["Dipirona"],
+  "symptoms": ["Dor de cabeça", "Febre", "Dor no corpo", "Ânsea de Vomito"],
+  "medications": ["omesH"],
   "patient": {
-    "name": "Maciel Suassuna",
-    "email": "macielsuassuna14@gmail.com",
+    "name": "Erivelton Lima",
+    "email": "eriveltonlima@uol.com",
     "sex": "MALE",
     "phone": "999999999",
-    "age": 22
+    "age": 43
   }
 }
 
 ###
 
-GET http://localhost:3001/api/v1/screening
+GET http://localhost:3001/api/v1/screening?phone=999999999
